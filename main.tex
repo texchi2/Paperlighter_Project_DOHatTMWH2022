@@ -1,0 +1,121 @@
+\documentclass[11pt,twoside]{article}
+
+\usepackage{paperlighter}
+
+\usepackage{longtable, setspace, outlines}
+ % for OliveGreen
+\definecolor{OliveGreen}{rgb}{0,0.6,0}
+% Set link colors
+%\usepackage[rgb,dvipsnames]{xcolor}
+%\hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
+
+\usepackage{pdfpages} % for includepdf
+
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+
+% For theorems and such
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+% if you use cleveref..
+\usepackage[capitalize,noabbrev]{cleveref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THEOREMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Todonotes is useful during development; simply uncomment the next line
+%    and comment out the line below the next line to turn off comments
+%\usepackage[disable,textsize=tiny]{todonotes}
+\usepackage[textsize=tiny]{todonotes}
+
+% Chinese
+\usepackage{xeCJK} % for Chinese, compiling by XeLaTex
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}  % setting the indentation to be two Chinese characters size.
+\usepackage{fontspec} %設定字體
+% Fandol font (the default)  not shown "內"
+\setCJKmainfont{AR PL UMing TW MBE} % AR PL UMing TW MBE or "UKai" https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese
+%BiauKai} %標楷體 from macOS %設定中文為系統上的字型，而英文不去更動，使用原TeX字型
+%\setCJKmainfont[Vertical=RotatedGlyphs]{AR PL UMing TW MBE}
+
+
+\slimtitle{居家牙醫醫療服務} %Paperlighter Example}
+\slimauthor{Author 萬芳牙科}
+
+
+\begin{document}
+
+\lightertitle{居家牙醫醫療服務}
+
+\lighterauthor{祁力行$^{\dagger}$, 李勝揚$^{\ddagger}$}
+
+\lighteraddress{$^\dagger$}{臺北市立萬芳醫院牙科部口腔顎面外科}
+\lighteraddress{$^\ddagger$}{臺北市立萬芳醫院牙科部}
+
+
+\lighteremail{110050@w.tmu.edu.tw}
+
+
+%\input{content/abstract}
+%\input{content/format}
+\input{content/Project_DOH}
+% my project main text
+%\input{content/others}
+
+
+%\bibliographystyle{plainnat}
+%\bibliography{ref}
+
+\newpage
+\appendix
+%\input{content/appendix}
+\includepdf[pages=-]{111年牙醫特殊醫療服務計畫 (ICF).pdf}
+\includepdf[pages=-]{111年牙醫特殊醫療服務計畫 (附件12).pdf} % 附件12 診紀錄
+\includepdf[pages=-]{A040170081040500-1090331-7000-014.pdf} % 附件14
+\includepdf[pages=-]{111年牙醫特殊醫療服務計畫 (DOH_附件).pdf}
+
+\end{document}
+
+
+
+%%% a list in TMWH
+到宅牙醫醫療服務已納入「全民健康保險居家醫療照護整合計畫」中
+%https://cda.org.tw/cda/public_medical_institution_type_b_search_result.jsp
+
+02-29307930*7088王秘書 116 台北市文山區興隆路3段111號2樓轉牙科
+台北市立萬芳醫院－委託財團法人私立台北醫學大學辦理
+
+王柏翔
+卓郁純
+林光勳
+翁瑛祺
+許晶晶
+陳育德
+陳俊銘
+陳培惠
+黃培琪
+黃曉楓
+蔡昀潔
+謝承祐 
