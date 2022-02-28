@@ -3,6 +3,9 @@
 
 \usepackage{paperlighter}
 
+% Remove page numbering
+\pagenumbering{gobble}
+
 \usepackage{longtable, setspace, outlines}
  % for OliveGreen
 \definecolor{OliveGreen}{rgb}{0,0.6,0}
@@ -57,7 +60,8 @@
 \setlength{\parindent}{2em}  % setting the indentation to be two Chinese characters size.
 \usepackage{fontspec} %設定字體
 % Fandol font (the default)  not shown "內"
-\setCJKmainfont{AR PL UMing TW MBE} % AR PL UMing TW MBE or "UKai" https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese
+\setCJKmainfont{[Iansui094-Regular.ttf]}
+%\setCJKmainfont{AR PL UMing TW MBE} % AR PL UMing TW MBE or "UKai" https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese
 %BiauKai} %標楷體 from macOS %設定中文為系統上的字型，而英文不去更動，使用原TeX字型
 %\setCJKmainfont[Vertical=RotatedGlyphs]{AR PL UMing TW MBE}
 
@@ -70,9 +74,10 @@
 
 \lightertitle{\hspace{3.5cm} 臺北市立萬芳醫院牙科部
 
-\hspace{3.8cm}特殊需求者牙醫醫療服務計畫}
+\hspace{2.5cm}特殊需求者口腔醫療與保健推廣計畫}
 % 特殊需求者牙醫醫療服務
-%居家牙醫醫療服務計畫}
+%居家牙醫醫療服務計畫
+% 進階照護院所：口腔醫療與保健推廣計畫書
 
 \lighterauthor{祁力行$^{\dagger}$, 李勝揚$^{\ddagger}$}
 
@@ -83,7 +88,7 @@
 \lighteremail{110050@w.tmu.edu.tw}
 
 
-%\input{content/abstract}
+\input{content/abstract}
 %\input{content/format}
 \input{content/Project_DOH}
 % my project main text
