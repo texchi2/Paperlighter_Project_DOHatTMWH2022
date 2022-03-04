@@ -15,6 +15,12 @@
 
 \usepackage{pdfpages} % for includepdf
 
+\usepackage{selinput}
+%\usepackage[margin=2cm]{geometry}
+\usepackage{enumitem,varwidth}
+%\usepackage[svgnames]{xcolor}
+\usepackage{tikz} % for SWOT
+\usetikzlibrary{shapes.geometric}
 
 % Recommended, but optional, packages for figures and better typesetting:
 \usepackage{microtype}
@@ -61,6 +67,8 @@
 \usepackage{fontspec} %設定字體
 % Fandol font (the default)  not shown "內"
 \setCJKmainfont{[Iansui094-Regular.ttf]}
+\setCJKsansfont{[Iansui094-Regular.ttf]}
+\setCJKmonofont{[Iansui094-Regular.ttf]}
 %\setCJKmainfont{AR PL UMing TW MBE} % AR PL UMing TW MBE or "UKai" https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese
 %BiauKai} %標楷體 from macOS %設定中文為系統上的字型，而英文不去更動，使用原TeX字型
 %\setCJKmainfont[Vertical=RotatedGlyphs]{AR PL UMing TW MBE}
@@ -92,7 +100,7 @@
 %\input{content/format}
 \input{content/Project_DOH}
 % my project main text
-%\input{content/others}
+\input{content/SWOT_DOH}
 
 
 %\bibliographystyle{plainnat}
