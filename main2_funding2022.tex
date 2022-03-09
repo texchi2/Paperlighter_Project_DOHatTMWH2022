@@ -1,0 +1,129 @@
+\documentclass[11pt,twoside]{article}
+\maxdeadcycles=1000 % Output loop---200 consecutive dead cycles.
+
+\usepackage{paperlighter}
+
+% Remove page numbering
+\pagenumbering{gobble}
+
+\usepackage{longtable, setspace, outlines, tabularx}
+ % for OliveGreen
+\definecolor{OliveGreen}{rgb}{0,0.6,0}
+% Set link colors
+%\usepackage[rgb,dvipsnames]{xcolor}
+%\hypersetup{colorlinks=true, linkcolor=RoyalBlue, urlcolor=RoyalBlue}
+
+\usepackage{pdfpages} % for includepdf
+
+\usepackage{selinput}
+%\usepackage[margin=2cm]{geometry}
+\usepackage{enumitem,varwidth}
+%\usepackage[svgnames]{xcolor}
+\usepackage{tikz} % for SWOT
+\usetikzlibrary{shapes.geometric}
+
+% Recommended, but optional, packages for figures and better typesetting:
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{booktabs} % for professional tables
+
+% Attempt to make hyperref and algorithmic work together better:
+\newcommand{\theHalgorithm}{\arabic{algorithm}}
+
+
+% For theorems and such
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+% if you use cleveref..
+\usepackage[capitalize,noabbrev]{cleveref}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THEOREMS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{assumption}[theorem]{Assumption}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Todonotes is useful during development; simply uncomment the next line
+%    and comment out the line below the next line to turn off comments
+%\usepackage[disable,textsize=tiny]{todonotes}
+\usepackage[textsize=tiny]{todonotes}
+
+% Chinese
+\usepackage{xeCJK} % for Chinese, compiling by XeLaTex
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}  % setting the indentation to be two Chinese characters size.
+\usepackage{fontspec} %設定字體
+% Fandol font (the default)  not shown "內"
+\setCJKmainfont{[Iansui094-Regular.ttf]}
+\setCJKsansfont{[Iansui094-Regular.ttf]}
+\setCJKmonofont{[Iansui094-Regular.ttf]}
+%\setCJKmainfont{AR PL UMing TW MBE} % AR PL UMing TW MBE or "UKai" https://www.overleaf.com/learn/latex/Questions/Which_OTF_or_TTF_fonts_are_supported_via_fontspec%3F#Chinese
+%BiauKai} %標楷體 from macOS %設定中文為系統上的字型，而英文不去更動，使用原TeX字型
+%\setCJKmainfont[Vertical=RotatedGlyphs]{AR PL UMing TW MBE}
+
+
+\slimtitle{特需中心} %Paperlighter Example}
+\slimauthor{萬芳醫院牙科部}
+
+
+\begin{document} % 獎勵醫院提供特殊需求者牙科醫療服務
+%衛生福利部
+%111 年度「特殊需求者牙科醫療服務獎助計畫」 申請獎助作業規定
+%本計畫經費財源為菸品健康福利捐,屬特定收入來源;年度進行中
+
+\lightertitle{\hspace{3.5cm} 臺北市立萬芳醫院牙科部
+
+\hspace{2.5cm} 111年度特殊需求者牙科醫療服務獎助計畫申請書}
+% 特殊需求者牙醫醫療服務
+%居家牙醫醫療服務計畫
+% 計畫申請書內容與格式
+% 綜合資料表
+% 進階照護院所：口腔醫療與保健推廣計畫書
+
+\lighterauthor{祁力行$^{\dagger}$, 李勝揚$^{\ddagger}$}
+
+\lighteraddress{$^\dagger$}{臺北市立萬芳醫院牙科部口腔顎面外科}
+\lighteraddress{$^\ddagger$}{臺北市立萬芳醫院牙科部}
+
+
+\lighteremail{110050@w.tmu.edu.tw}
+
+
+%\input{content/abstract} % no more
+%\input{content/format}
+\input{content/Project_DOH_funding2022}
+% my project main text
+%\input{content/SWOT_DOH}
+
+
+%\bibliographystyle{plainnat}
+%\bibliography{ref}
+
+\newpage
+\appendix
+%\input{content/appendix}
+\includepdf[pages=-]{111年牙醫特殊醫療服務計畫 (ICF).pdf}
+%x\includepdf[pages=-]{111年牙醫特殊醫療服務計畫 (附件3).pdf}
+\includegraphics[width=0.9\textwidth]{111年牙醫特殊醫療服務計畫 (附件3).png}
+\clearpage
+%\includepdf[pages=-]{111年牙醫特殊醫療服務計畫 (附件7).pdf}
+\includegraphics[width=0.9\textwidth]{111年牙醫特殊醫療服務計畫 (附件7).png}
+\includepdf[pages=-]{111年牙醫特殊醫療服務計畫 (附件12).pdf} % 附件12 診紀錄
+\includepdf[pages=-]{A040170081040500-1090331-7000-014.pdf} % 附件14
+\includepdf[pages=-]{111年牙醫特殊醫療服務計畫 (DOH_附件).pdf}
+
+\input{content/DOH_equipment} % 附件19
+
+\end{document}
