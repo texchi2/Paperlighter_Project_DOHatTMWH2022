@@ -96,8 +96,8 @@
 \newcounter{mysec}[section]
 \renewcommand\thesection{%
     \addtocounter{mysec}{1}%
-    \zhnum[style={Traditional,Financial}]{mysec}、}
-\renewcommand\thesubsection{\zhnum{subsection}、} % added a 、
+    \zhnum[style={Traditional,digitals}]{mysec}、} % Financial
+\renewcommand\thesubsection{(\zhnum{subsection})、} % added a 、
 \renewcommand\thesubsubsection{（\zhnum{subsubsection}）} % added parentheses
 % (full-width, don't know if that's what you want)
 \renewcommand\theparagraph{} % you don't want paragraph numbers
@@ -110,10 +110,10 @@
 
 % here we need to make sure the normal section counter is accessed
 \titleformat{\section}{\Large\bfseries\sffamily\filcenter}
-    {\zhnum[style={Traditional,Financial}]{section}、}{.5em}{}
+    {\zhnum[style={Traditional,digitals}]{section}、}{.5em}{} % financial
 % not really sure what you intend to achieve with \fontsize but I'll leave it here
-\titleformat*{\subsection}{\fontsize{18}{20}\bfseries\sffamily} 
-\titleformat*{\subsubsection}{\fontsize{16}{18}\bfseries\sffamily}
+\titleformat*{\subsection}{\bfseries\sffamily} %\fontsize{18}{20}
+\titleformat*{\subsubsection}{\bfseries\sffamily} %\fontsize{16}{18}
 
 % no extra version for numberless is necessary since no numbers are used anyways
 % also you get newlines from omitting the [display] in \titleformat already
